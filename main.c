@@ -4,10 +4,7 @@
 int main()
 {
     int num1=0, num2=0, temp=0;
-    printf("Please Enter here your first number: ");
-    scanf("%d", &num1);
-    printf("Please Enter here your second number: ");
-    scanf("%d", &num2);
+    scanf("%d%d", &num1, &num2);
 
     if (num1 > num2)
     {
