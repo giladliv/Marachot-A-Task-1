@@ -48,6 +48,7 @@ int main()
             printf(" %d", curr);
         }
     }
+    printf("\n");
 
     return (0);
 }
