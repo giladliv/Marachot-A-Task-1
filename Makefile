@@ -5,7 +5,7 @@ OBJECTS_LIB_LP=libclassloops.o basicClassification.o
 OBJECTS_LIB_RC=libclassrec.o basicClassification.o
 FLAGS= -Wall -g
 
-all: mains maindloop maindrec libclassrec.a libclassrec.a libclassrec.so libclassloops.so
+all: mains maindloop maindrec libclassloops.a libclassrec.a libclassrec.so libclassloops.so
 
 mains: $(OBJECTS_MAIN) libclassrec.a
 	$(CC) $(FLAGS) -o mains $(OBJECTS_MAIN) libclassrec.a -lm
