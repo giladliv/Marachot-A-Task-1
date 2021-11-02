@@ -4,7 +4,6 @@
 int main()
 {
     int num1=0, num2=0, temp=0;
-    int isGood = FALSE;
     printf("Please Enter here your first number: ");
     scanf("%d", &num1);
     printf("Please Enter here your second number: ");
@@ -17,40 +16,43 @@ int main()
         num2 = temp;
     }
 
-    for (int i = 0; i < 4; i++)
+    printf("The Armstrong numbers are:");
+    for (int curr = num1; curr <= num2; curr++)
     {
-        isGood = FALSE;
-        for (int curr = num1; curr <= num2; curr++)
+        if (isArmstrong(curr) == TRUE)
         {
-            switch (i)
-            {
-                case 0:
-                    isGood = isPrime(curr);
-                    break;
-
-                case 1:
-                    isGood = isArmstrong(curr);
-                    break;
-
-                case 2:
-                    isGood = isStrong(curr);
-                    break;
-
-                case 3:
-                    isGood = isPalindrome(curr);
-                    break;
-                
-                default:
-                    isGood = FALSE;
-                    break;
-            }
-            if (isGood == TRUE)
-            {
-                printf("%d ", curr);
-            }
+            printf(" %d", curr);
         }
-        printf("\n");        
     }
+
+    printf("\nThe Palindromes are:");
+    for (int curr = num1; curr <= num2; curr++)
+    {
+        if (isPalindrome(curr) == TRUE)
+        {
+            printf(" %d", curr);
+        }
+    }
+
+    printf("\nThe Prime numbers are:");
+    for (int curr = num1; curr <= num2; curr++)
+    {
+        if (isPrime(curr) == TRUE)
+        {
+            printf(" %d", curr);
+        }
+    }
+
+    printf("\nThe Strong numbers are:");
+    for (int curr = num1; curr <= num2; curr++)
+    {
+        if (isStrong(curr) == TRUE)
+        {
+            printf(" %d", curr);
+        }
+    }
+
+    
 
     return (0);
 }
