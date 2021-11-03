@@ -1,6 +1,12 @@
 #include "NumClass.h"
 #include <math.h>
 
+/**
+ * @brief returns the number of digits of given number
+ * 
+ * @param num the number to check his length
+ * @return len of digits
+ */
 int lenOfNum(int num)
 {
     int len = 0;
